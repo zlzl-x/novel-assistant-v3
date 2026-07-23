@@ -41,7 +41,12 @@ if (-not (git remote get-url origin 2>$null)) {
   git remote add origin $remote
 }
 
-git push -u origin main
+if (-not (gh repo view "$Owner/$Repo" 2>$null)) {
+  Write-Host "==> 创建 GitHub 仓库 $Owner/$Repo ..."
+  gh repo create $Repo --public --source=. --remote=origin --push
+} else {
+  git push -u origin main
+}
 
 gh release create "v$Version" $Installer.FullName `
   --repo "$Owner/$Repo" `
