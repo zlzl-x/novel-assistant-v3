@@ -1,0 +1,48 @@
+{
+  "name": "@novel-assistant/desktop",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./out/main/index.js",
+  "scripts": {
+    "predev": "node ./scripts/rebuild-native.mjs",
+    "dev": "electron-vite dev",
+    "prebuild": "pnpm run rebuild:native",
+    "build": "electron-vite build && electron-builder --dir",
+    "prepreview": "pnpm run rebuild:native",
+    "prebuild:installer": "pnpm run rebuild:native",
+    "build:installer": "electron-vite build && electron-builder --win nsis",
+    "preview": "electron-vite preview",
+    "typecheck": "tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.web.json",
+    "test": "vitest run",
+    "rebuild:native": "node ./scripts/rebuild-native.mjs",
+    "postinstall": "node ./scripts/rebuild-native.mjs"
+  },
+  "dependencies": {
+    "@novel-assistant/core": "workspace:*",
+    "@novel-assistant/db": "workspace:*",
+    "archiver": "^7.0.1",
+    "mammoth": "^1.9.0",
+    "naive-ui": "^2.40.1",
+    "pinia": "^2.3.0",
+    "vis-data": "^8.0.4",
+    "vis-network": "^10.1.0",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@electron/rebuild": "^3.7.1",
+    "@types/archiver": "^6.0.3",
+    "@types/node": "^22.10.2",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "autoprefixer": "^10.4.20",
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8",
+    "electron-vite": "^2.3.0",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.2",
+    "vite": "^5.4.11",
+    "vitest": "^2.1.8"
+  }
+}

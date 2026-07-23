@@ -1,0 +1,19 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "preserve",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "baseUrl": ".",
+    "paths": {
+      "@novel-assistant/core": ["../../packages/core/src/index.ts"],
+      "@renderer/*": ["src/renderer/src/*"],
+      "@/*": ["src/renderer/src/*"]
+    }
+  },
+  "include": [
+    "src/renderer/src/env.d.ts",
+    "src/renderer/src/vue-shim.d.ts",
+    "src/renderer/src/**/*",
+    "src/preload/*.d.ts"
+  ]
+}

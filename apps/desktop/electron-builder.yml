@@ -1,0 +1,26 @@
+appId: com.novel-assistant.desktop
+productName: 小说创作助手 v3
+directories:
+  buildResources: build
+  output: dist
+files:
+  - '!**/.vscode/*'
+  - '!src/*'
+  - '!electron.vite.config.{js,ts,mjs,cjs}'
+  - '!{.eslintignore,.eslintrc.cjs,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md}'
+  - '!{tsconfig.json,tsconfig.node.json,tsconfig.web.json}'
+asarUnpack:
+  - 'node_modules/better-sqlite3/**'
+win:
+  executableName: novel-assistant
+  target:
+    - nsis
+  signAndEditExecutable: false
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  perMachine: false
+mac:
+  executableName: novel-assistant
+linux:
+  executableName: novel-assistant

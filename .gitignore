@@ -1,0 +1,26 @@
+node_modules/
+dist/
+out/
+apps/desktop/dist/
+apps/desktop/out/
+*.db
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
+coverage/
+.vite/
+*.local
+*.exe
+*.blockmap
+*.7z
+Thumbs.db
+.idea/
+.vscode/
+*.tsbuildinfo
+
+# Cursor IDE（仅保留项目 rules，不上传 skills/hooks）
+.cursor/*
+!.cursor/rules/
+!.cursor/rules/**
