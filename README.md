@@ -13,7 +13,7 @@
 ### 普通用户：下载安装包
 
 1. 打开 [GitHub Releases](https://github.com/zlzl-x/novel-assistant-v3/releases)
-2. 下载最新版 `小说创作助手 v3 Setup x.x.x.exe` 并安装
+2. 下载最新版 `novel-assistant-v3-setup-x.x.x.exe` 并安装
 3. 首次启动 → **设置** 中填写 LLM API Key → 顶栏选择 **存储目录**
 
 ### 开发者：从源码运行
