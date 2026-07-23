@@ -20,7 +20,7 @@ Thumbs.db
 .vscode/
 *.tsbuildinfo
 
-# Cursor IDE（仅保留项目 rules，不上传 skills/hooks）
+# Cursor IDE（仅保留项目 rules）
 .cursor/*
 !.cursor/rules/
 !.cursor/rules/**
